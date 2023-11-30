@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=0.9"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>Registro de uso Impresora 3D</title>
+</head>
+<body>
+	<div class="contenedor">
+		<div class="columna-izquierda">
+
+      <div class="seleccion-formulario" id="seleccion-formulario">        
+        <h1 id="principal">Registro de uso Impresora 3D</h1>
+				<button id="btnFormulario1">Impresora Resina</button>
+				<button id="btnFormulario2">Impresora Filamento</button>
+			</div>
+
+			<div class="registro activo" id="registro1">
+				<div class="header" id="tituloFormulario1">
+					<h1>Registro de uso Impresora 3D</h1>
+				</div>
+
+        <div class="boton-regreso-container" id="boton-regreso-container">
+          <button onclick="regresarAlInicio()">Regresar</button>
+        </div>
+		
+				<form class="formulario" id="formulario1">
+          <!-- ... (resto del formulario 1) ... -->
+          <div class="input-fecha">
+            <label for="fecha">Fecha: <input type="date" id="fecha" name="fecha" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="nombre">Nombre: <input type="text" id="nombre"  placeholder=" " name="nombre" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="boleta">No. de Boleta: <input type="text" id="boleta" name="boleta" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="materia">Materia: <input type="text" id="materia" name="materia" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="profesor">Profesor: <input type="text" id="profesor" name="profesor" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="correo">Correo: <input type="email" id="correo" name="correo" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="Cantpiezas">Cant. de piezas:</label>
+            <input id="piezas" type="number" name="piezas" value="0" />
+          </div>
+
+          <label class="materialUsado">
+            <input type="checkbox" name="resina" id="resina" value="X">
+            Resina
+          </label><br>
+        
+          <label class="materialUsado">
+            <input type="checkbox" name="alcohol" id="alcohol" value="X">
+            Alcohol Isopropílico
+          </label><br>
+        
+          <label class="materialUsado">
+            <input type="checkbox" name="campoQ" id="campoQ" value="X">
+            Campo Quirúrgico
+          </label><br>
+        
+          <label class="materialUsado">
+            <input type="checkbox" name="guantesN" id="guantesN" value="X">
+            Guantes de Nitrilo
+          </label><br>
+        
+          <label class="materialUsado">
+            <input type="checkbox" name="toallasM" id="toallasM"  value="X">
+            Toallas de Microfibra
+          </label><br>
+
+
+          <button type="submit">
+            REGISTRO
+          </button>          
+        </form>
+			</div>
+
+			<div class="registro" id="registro2">
+        
+				<div class="header" id="tituloFormulario2">
+					<h1>Registro de uso Impresora 3D</h1>
+				</div>
+
+        <div class="boton-regreso-container" id="boton-regreso-container">
+          <button onclick="regresarAlInicio()">Regresar</button>
+        </div>
+		
+				<form class="formulario" id="formulario2">
+          <!-- ... (resto del formulario 2) ... -->
+          <div class="input-fecha">
+            <label for="fecha">Fecha: <input type="date" id="fecha" name="fecha" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="nombre">Nombre: <input type="text" id="nombre"  placeholder=" " name="nombre" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="boleta">No. de Boleta: <input type="text" id="boleta" name="boleta" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="materia">Materia: <input type="text" id="materia" name="materia" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="profesor">Profesor: <input type="text" id="profesor" name="profesor" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="correo">Correo: <input type="email" id="correo" name="correo" required></label>
+          </div>
+
+          <div class="input-group">
+            <label for="Cantpiezas">Cant. de piezas:</label>
+            <input id="piezas" type="number" name="piezas" value="0" />
+          </div>
+
+          
+          <div class="input-group">
+            <label for="material">Cantidad de Material: <input type="text" id="material" name="material" required></label>
+          </div>
+
+          <button type="submit">
+            REGISTRO
+          </button>          
+        </form>
+			</div>
+
+		  <div class="header exito" id="exito">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+					<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+					<path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+				</svg>
+				<h1>Registrado correctamente!</h1>				
+			</div>
+		</div>
+
+		<div class="columna-derecha">
+      <img src="css/3dPrinter.webp" alt="impresora 3D">
+      
+
+
+		</div> 
+	</div>
+
+	<script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Registro de uso Impresora 3D</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="registro activo" id="registro">
+            -- Columna Izquierda 
+            <div class="columna-izquierda">
+                <div class="header" id="tituloFormulario">
+                    <h1>Registro de uso Impresora 3D</h1>
+                </div>
+
+                -- Contenedor para los botones 
+                <div id="contenedorBotones">
+                    <button onclick="mostrarFormulario('resina')">Impresión Resina</button>
+                    <button onclick="mostrarFormulario('filamento')">Impresión Filamento</button>
+                </div>
+
+                - Formulario de Resina 
+                <div class="resina" id="formularioResina" style="display: none;">
+                    -- botón para regresar 
+                    <div class="boton-regreso-container">
+                        <button onclick="regresarAlInicio()">Regresar</button>
+                    </div>
+                    -- Campos para seleccionar materiales y datos personales 
+                    <form class="formulario" id="formularioResina">
+                       !-- ... (contenido del formulario de resina) 
+                        <div class="input-fecha">
+                          <label for="fecha">Fecha: <input type="date" id="fecha" name="fecha" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="nombre">Nombre: <input type="text" id="nombre"  placeholder=" " name="nombre" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="boleta">No. de Boleta: <input type="text" id="boleta" name="boleta" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="materia">Materia: <input type="text" id="materia" name="materia" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="profesor">Profesor: <input type="text" id="profesor" name="profesor" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="email">Correo: <input type="email" id="email" name="email" required></label>
+                        </div>
+            
+                        <div class="input-group">
+                          <label for="Cantpiezas">Cant. de piezas:</label>
+                          <input id="piezas" type="number" name="piezas" value="0" />
+                        </div>
+            
+                        <label class="materialUsado">
+                          <input type="checkbox" name="opcion" value="Resina">
+                          Resina
+                        </label><br>
+                      
+                        <label class="materialUsado">
+                          <input type="checkbox" name="opcion" value="Alcohol Isopropílico">
+                          Alcohol Isopropílico
+                        </label><br>
+                      
+                        <label class="materialUsado">
+                          <input type="checkbox" name="opcion" value="Campo Quirúrgico">
+                          Campo Quirúrgico
+                        </label><br>
+                      
+                        <label class="materialUsado">
+                          <input type="checkbox" name="opcion" value="Guantes de Nitrilo">
+                          Guantes de Nitrilo
+                        </label><br>
+                      
+                        <label class="materialUsado">
+                          <input type="checkbox" name="opcion" value="Toallas de Microfibra">
+                          Toallas de Microfibra
+                        </label><br>
+            
+                        <button type="submit">REGISTRO</button>
+                    </form>
+                </div>
+
+                -- Formulario de Filamento 
+                <div class="filamento" id="formularioFilamento" style="display: none;">
+                    -- botón para regresar 
+                    <div class="boton-regreso-container">
+                        <button onclick="regresarAlInicio()">Regresar</button>
+                    </div>
+                    -- Campos para seleccionar datos personales específicos de filamento -
+                    <form class="formularioFilamento" id="formularioFilamento">
+                        -- ... (contenido del formulario de filamento) -
+                        <div class="input-fecha">
+                          <label for="fecha">Fecha: <input type="date" id="fecha" name="fecha" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="nombre">Nombre: <input type="text" id="nombre"  placeholder=" " name="nombre" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="boleta">No. de Boleta: <input type="text" id="boleta" name="boleta" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="materia">Materia: <input type="text" id="materia" name="materia" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="profesor">Profesor: <input type="text" id="profesor" name="profesor" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="email">Correo: <input type="email" id="email" name="email" required></label>
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="Cantpiezas">Cantidad de pienzas:</label>
+                          <input id="piezas" type="number" name="piezas" value="0" />
+                        </div>
+              
+                        <div class="input-group">
+                          <label for="material">Cantidad de Material: <input type="text" id="material" name="material" required></label>
+                        </div>
+              
+                        <button type="submit">REGISTRO</button>
+                    </form>
+                    
+                </div>
+                
+            </div>
+                        
+        </div>
+      
+
+        -- Columna Derecha -
+        <div class="columna-derecha"></div>
+        
+
+    </div>
+      <script>
+        function regresarAlInicio() {
+            // Oculta ambos formularios
+            document.getElementById('formularioResina').style.display = 'none';
+            document.getElementById('formularioFilamento').style.display = 'none';
+
+            // Muestra el contenedor de botones
+            document.getElementById('contenedorBotones').style.display = 'flex';
+            document.getElementById('tituloFormulario').innerHTML = '<h1>Registro de uso Impresora 3D</h1>';
+        }
+
+        function mostrarFormulario(tipo) {
+            // Oculta ambos formularios al principio 
+            document.getElementById('formularioResina').style.display = 'none';
+            document.getElementById('formularioFilamento').style.display = 'none';
+
+            // Oculta el contenedor de botones
+            document.getElementById('contenedorBotones').style.display = 'none';
+
+            // Muestra el formulario correspondiente al tipo de impresión seleccionado
+            if (tipo === 'resina') {
+                document.getElementById('formularioResina').style.display = 'block';
+                document.getElementById('tituloFormulario').innerHTML = '<h1>Formulario de Impresión con Resina</h1>';
+
+            } else if (tipo === 'filamento') {
+                document.getElementById('formularioFilamento').style.display = 'block';
+                document.getElementById('tituloFormulario').innerHTML = '<h1>Formulario de Impresión con Filamento</h1>';
+            }
+        }
+    </script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+-->
+
+
+
+
+
+

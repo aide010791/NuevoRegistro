@@ -1,0 +1,536 @@
+:root {
+	--primario: #013E6A;
+	--secundario: #000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #F0F4F3;
+	font-family: 'Quicksand', sans-serif;
+
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	background: #fff;
+	min-height: 60vh;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.columna-izquierda {
+	padding: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.columna-derecha {
+	width: 100%; /* Ajusta el ancho de la columna */
+    height: 100%; /* Ajusta la altura de la columna (puedes ajustarlo según tus necesidades) */
+    overflow: hidden;
+}
+
+.columna-derecha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header{
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.header h1 {
+	color: var(--primario);
+}
+
+#principal{
+	margin-bottom: 40px;
+	text-align: center;
+	color: var(--primario);
+}
+
+#seleccion-formulario{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+	
+#boton-regreso-container{
+	display: flex;
+	justify-content: end;
+	padding-bottom: 20px;
+}
+
+
+label {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 500;
+	color: var(--secundario);
+	font-size: 14px;
+}
+
+.input-group, .input-piezas, .materialUsado{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+/*.input-group, .input-piezas .material-usado{
+	position: relative;
+}*/
+
+.registro {
+	display: none;
+}
+
+.registro.activo {
+	display: block;
+}
+
+.exito {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.exito.activo {
+	display: flex;
+}
+
+.exito svg {
+	width: 50px;
+	height: 50px;
+	color: var(--primario);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    height: 50px; 
+    line-height: 50px; /* Ajustado en consecuencia */
+	font-size: 16px;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	padding: 0 20px 0 45px;
+	margin-bottom: 20px;
+	background: #f4f8f7;
+	color: var(--primario);
+	font-family: 'Quicksand', sans-serif;
+	border: 2px solid transparent;
+	transition: .3s ease all;
+}
+
+input[type="checkbox"] {
+    height: 18px; /* Reducido el tamaño del cuadro de selección */
+    width: 18px;
+    margin-right: 8px; /* Espacio entre el cuadro de selección y el texto */
+}
+
+
+
+
+
+input:focus {
+	outline: none;
+	border: 2px solid var(--primario);
+}
+
+button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: none;
+	height: 50px;
+	color: var(--primario);
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	border: 2px solid var(--primario);
+	cursor: pointer;
+	transition: .3s ease all;
+	outline: none;
+}
+
+button:hover {
+	background: var(--primario);
+	color: #fff;
+}
+
+button svg {
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+
+
+/*
+
+:root {
+	--primario: #013E6A;
+	--secundario: #000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #F0F4F3;
+	font-family: 'Quicksand', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	background: #fff;
+	min-height: 60vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.columna-izquierda {
+	padding: 40px;
+}
+
+.columna-derecha {
+	background-image: url('Impresora3D.jpg');
+	background-size: cover;
+	background-position-x: center;
+}
+
+.header {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.header h1 {
+	color: var(--primario);
+}
+
+.header h1 {
+	color: var(--primario);
+}
+
+#contenedorBotones {
+    display: flex;
+    flex-direction: column; /* Alinea los botones verticalmente 
+    align-items: center; /* Centra el contenido verticalmente 
+    margin-top: 20px;
+}
+
+.boton-regreso-container {
+    text-align: -webkit-right; /* Alinea el contenido a la derecha 
+    margin-top: 20px; /* Ajusta el espacio superior 
+	margin-bottom: 20px;
+}
+
+.boton-regreso-container button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background: none;
+    height: 50px;
+    color: var(--primario);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Alinea el contenido a la izquierda 
+    border: 2px solid var(--primario);
+    cursor: pointer;
+    transition: .3s ease all;
+    outline: none;  
+}
+
+label {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 500;
+	color: var(--secundario);
+	font-size: 14px;
+}
+
+.input-group, .input-piezas, .materialUsado{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    height: 50px; /* Reducido el tamaño del cuadro de texto 
+    line-height: 50px; /* Ajustado en consecuencia 
+	font-size: 16px;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	padding: 0 20px 0 45px;
+	margin-bottom: 20px;
+	background: #f4f8f7;
+	color: var(--primario);
+	font-family: 'Quicksand', sans-serif;
+	border: 2px solid transparent;
+	transition: .3s ease all;
+}
+
+input[type="checkbox"] {
+    height: 18px; /* Reducido el tamaño del cuadro de selección 
+    width: 18px;
+    margin-right: 8px; /* Espacio entre el cuadro de selección y el texto 
+}
+
+
+input:focus {
+	outline: none;
+	border: 2px solid var(--primario);
+}
+
+
+
+button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: none;
+	height: 50px;
+	color: var(--primario);
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	border: 2px solid var(--primario);
+	cursor: pointer;
+	transition: .3s ease all;
+	outline: none;	
+}
+
+.registro .mostrar{
+	display: none;
+}
+
+.registro.activo {
+	display: block;
+}
+
+.exito {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.exito.activo {
+	display: flex;
+}
+
+.exito svg {
+	width: 50px;
+	height: 50px;
+	color: var(--primario);
+}
+
+
+
+
+/* Estilo para mostrar el formulario cuando se activa */
+/*form {
+	display: none;
+}
+  
+/* Estilo para mostrar el formulario cuando se activa 
+form.mostrar {
+	display: block;
+}
+  
+form.mostrar h1 {
+	display: block;
+	margin-bottom: 40px;
+	text-align: center;
+}*/
+
+
+/*
+:root {
+	--primario: #013E6A;
+	--secundario: #000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #F0F4F3;
+	font-family: 'Quicksand', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	background: #fff;
+	min-height: 60vh;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.columna-izquierda {
+	padding: 40px;
+}
+
+.columna-derecha {
+	background-image: url('Impresora3d.jpg');
+	background-size: cover;
+	background-position-x: center;
+}
+
+.header {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.header h1 {
+	color: var(--primario);
+}
+
+label {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 500;
+	color: var(--secundario);
+	font-size: 14px;
+}
+
+.input-group, .input-piezas{
+	position: relative;
+}
+
+.registro .mostrar{
+	display: none;
+}
+
+.registro.activo {
+	display: block;
+}
+
+.exito {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.exito.activo {
+	display: flex;
+}
+
+.exito svg {
+	width: 50px;
+	height: 50px;
+	color: var(--primario);
+}
+
+
+
+input,  select, time{
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	padding: 0 20px 0 45px;
+	margin-bottom: 20px;
+	background: #f4f8f7;
+	color: var(--primario);
+	font-family: 'Quicksand', sans-serif;
+	border: 2px solid transparent;
+	transition: .3s ease all;
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid var(--primario);
+}
+
+button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: none;
+	height: 50px;
+	color: var(--primario);
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	border: 2px solid var(--primario);
+	cursor: pointer;
+	transition: .3s ease all;
+	outline: none;
+}
+
+button:hover {
+	background: var(--primario);
+	color: #fff;
+}
+
+button svg {
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+} */
